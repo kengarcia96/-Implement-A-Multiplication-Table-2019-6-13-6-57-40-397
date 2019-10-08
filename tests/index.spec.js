@@ -34,6 +34,13 @@ it('should create multiplication table by start and end number as parameters', (
     const startNumber = 2;
 	const endNumber = 4;
     const getValidationResult = validations.create_multiplication_table(startNumber, endNumber);
-    let output = "2*2=4  \n"+ "2*3=6  3*3=9  \n"+ "2*4=8  3*4=12  4*4=16  \n";
+    const output = "2*2=4  \n"+ "2*3=6  3*3=9  \n"+ "2*4=8  3*4=12  4*4=16  \n";
     expect(getValidationResult).toBe(output);
+});
+
+it('should return null because one of validations fails', () =>{
+    const startNumber = 5000;
+	const endNumber = 10;
+    const getValidationResult = validations.create_multiplication_table(startNumber, endNumber);
+    expect(getValidationResult).toBe(null);
 });

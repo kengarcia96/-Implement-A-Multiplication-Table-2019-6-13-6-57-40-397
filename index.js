@@ -35,9 +35,12 @@ function createMultiplyTable(startNumber, endNumber){
             }
             multiplicationTable += '\n';
         }
-
-        return multiplicationTable;
     }
+    else{
+        multiplicationTable = null;
+    }
+
+    return multiplicationTable;
 
 }
 
