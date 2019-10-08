@@ -18,5 +18,8 @@
   "homepage": "https://github.com/kengarcia96/-Implement-A-Multiplication-Table-2019-6-13-6-57-40-397#readme",
   "devDependencies": {
     "jest": "^24.9.0"
+  },
+  "directories": {
+    "test": "tests"
   }
 }

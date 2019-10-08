@@ -1,6 +1,6 @@
 function validate_input_order(startNumber, endNumber){
 
-    if (startNumber < endNumber){
+    if (startNumber <= endNumber){
         return true;
     }
 
@@ -24,31 +24,26 @@ function validate_input_range(startNumber, endNumber){
 }
 
 
-function createMultiplyTable(startNumber,endNumber){
+function createMultiplyTable(startNumber, endNumber){
 
-    let multiplicationTable;
+    let multiplicationTable = "";
 
-    if(validate_input_order == true && validate_input_order == true){
-
-        for (let x = 0; x < startNumber; x++){
-            
-            multiplicationTable = x +'x';
-
-            for (let y = 0; y < startNumber; y++){
-                multiplicationTable += y 
+    if(validate_input_order(startNumber,endNumber) == true && validate_input_order(startNumber,endNumber) == true){
+        for (let x = startNumber; x <= endNumber; x++){
+            for (let y = startNumber; y <= x; y++){
+                multiplicationTable += y + '*' + x +'='+ (y*x) +'  ';
             }
-            
-
+            multiplicationTable += '\n';
         }
 
-
+        return multiplicationTable;
     }
-
 
 }
 
 module.exports = {
     validate_input_order: validate_input_order,
-    validate_input_range: validate_input_range
+    validate_input_range: validate_input_range,
+    create_multiplication_table: createMultiplyTable
 
 }

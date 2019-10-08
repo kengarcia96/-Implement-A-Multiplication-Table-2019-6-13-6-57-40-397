@@ -1,0 +1,32 @@
+Given: 
+StartNumber=2, End Number=3
+
+When:
+validate_input_order(startNumber, endNumber)
+
+Then:
+returns true if StartNumber is less than the EndNumber
+
+Given: 
+StartNumber=2, End Number=3
+
+When:
+validate_input_range(startNumber, endNumber)
+
+Then:
+returns true if StartNumber or endNumber is within 1 to 1000;
+
+Given: 
+StartNumber=2, End Number=3
+
+When:
+create_multiplication_table(startNumber, endNumber)
+
+Then:
+returns the String in Multiplication Table format like this:
+
+2*2=4
+2*3=6  3*3=9
+2*4=8  3*4=12  4*4=16
+
+
