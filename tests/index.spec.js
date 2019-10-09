@@ -1,14 +1,15 @@
 const validations = require('../index');
 
-
-it('should compare start and end numbers and returns true where first is less than the second', () =>{
+//should return true when first is less than second??
+//
+it('should return true after compare start and end numbers', () =>{
     const startNumber = 2;
 	const endNumber = 3;
 	const getValidationResult = validations.validate_input_order(startNumber, endNumber);
     expect(getValidationResult).toBe(true);
 });
 
-it('should compare start and end numbers and returns false where first is greater than the second', () =>{
+it('should return false after compare start and end numbers', () =>{
     const startNumber = 3;
 	const endNumber = 2;
 	const getValidationResult = validations.validate_input_order(startNumber, endNumber);
@@ -16,21 +17,21 @@ it('should compare start and end numbers and returns false where first is greate
 });
 
 
-it('should check start and end if it is in range from 1 to 1000 and returns true when both are in range', () =>{
+it('should return true after check start and end if it is in range from 1 to 1000', () =>{
     const startNumber = 1;
 	const endNumber = 1000;
 	const getValidationResult = validations.validate_input_range(startNumber, endNumber);
     expect(getValidationResult).toBe(true);
 });
 
-it('should check start and end if it is in range from 1 to 1000 and returns false when one is out of range', () =>{
+it('should return false after check start and end if it is in range from 1 to 1000', () =>{
     const startNumber = 2000;
 	const endNumber = 1000;
 	const getValidationResult = validations.validate_input_range(startNumber, endNumber);
     expect(getValidationResult).toBe(false);
 });
 
-it('should create multiplication table by start and end number as parameters', () =>{
+it('should return multiplication table by start and end number as parameters', () =>{
     const startNumber = 2;
 	const endNumber = 4;
     const getValidationResult = validations.create_multiplication_table(startNumber, endNumber);
@@ -38,7 +39,7 @@ it('should create multiplication table by start and end number as parameters', (
     expect(getValidationResult).toBe(output);
 });
 
-it('should return null because one of validations fails', () =>{
+it('should return null after validation fails when try to create multiplication table', () =>{
     const startNumber = 5000;
 	const endNumber = 10;
     const getValidationResult = validations.create_multiplication_table(startNumber, endNumber);
